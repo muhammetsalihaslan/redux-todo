@@ -1,6 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-const TodoList = () => {
+function TodoList() {
+  const items = useSelector((state) => state.todos.item);
+
   return (
     <ul className="todo-list">
       <li>
@@ -12,6 +15,6 @@ const TodoList = () => {
       </li>
     </ul>
   );
-};
+}
 
 export default TodoList;
